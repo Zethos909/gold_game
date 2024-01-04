@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gold_counter {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: left;
+}
+
+.activity_box {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+.activity_box h1 {
+    margin: 0;
+}
+
+/* Optional: Style the input field inside the gold_counter */
+.gold_counter input {
+    width: 100px;
+    padding: 5px;
+}
+
+/* Optional: Add some spacing between elements */
+.activity_box + .activity_box {
+    margin-left: 20px;
+}
