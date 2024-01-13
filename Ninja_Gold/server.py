@@ -58,5 +58,10 @@ def update_gold(amount):
     session['gold_update'] = updated_gold
     print(f"Updated Gold: {updated_gold}")
 
+@app.route('/reset', methods=['POST'])
+def reset():
+    session.clear()
+    return redirect(url_for("index"))
+
 if __name__ == '__main__':
     app.run(debug=True)
