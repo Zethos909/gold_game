@@ -10,19 +10,53 @@
 <body>
     <div class = "gold_counter">
         <h1>Your Gold</h1>
-        <input type="text">
+        <input type="text", value = "{{current_gold}}" readonly>
     </div>
     <div class="activity_box">
         <h1>Farm</h1>
+        <p>(Earn 10-20 Gold)</p>
+        <form action="{{url_for('farm')}}" method="post">
+            <input type="submit" value="Go Farming">
+        </form>
+        {% if request.method == "POST" %}
+            <p>Form Submitted!</p>
+        {% endif %}
     </div>
     <div class="activity_box">
         <h1>Cave</h1>
+        <p>(Earn 5-10 Gold)</p>
+        <form action="{{url_for('cave')}}" method="post">
+            <input type="submit" value="Go Spelunking">
+        </form>
+        {% if request.method == "POST" %}
+            <p>Form Submitted!</p>
+        {% endif %}
     </div>
     <div class="activity_box">
         <h1>House</h1>
+        <p>(Earn 2-5 Gold)</p>
+        <form action="{{url_for('house')}}" method="post">
+            <input type="submit" value="Go Couch Searching">
+        </form>
+        {% if request.method == "POST" %}
+            <p>Form Submitted!</p>
+        {% endif %}
     </div>
     <div class="activity_box">
         <h1>Casino</h1>
+        <p>(Win/Lose 0-50 Gold)</p>
+        <form action="{{url_for('casino')}}" method="post">
+            <input type="submit" value="Go Gamble">
+        </form>
+        {% if request.method == "POST" %}
+            <p>Form Submitted!</p>
+        {% endif %}
+    </div>
+    <h1>ACTIVITIES</h1>
+    <div class="activity_summary">
+        {% for act in act_log %}
+            <p>{{act}}</p>
+        {%endfor%}
     </div>
 </body>
 </html>

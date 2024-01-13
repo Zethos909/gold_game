@@ -16,19 +16,55 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #ffffff;
+    height: 500px;
+    width: 500px;
+}
+
+.activity_summary {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    padding: 10px;
 }
 
 .activity_box h1 {
     margin: 0;
+    text-align: center;
 }
 
-/* Optional: Style the input field inside the gold_counter */
+.activity_box p {
+    text-align: center;
+}
+
+.activity_summary {
+    height: 500px;
+    width: auto;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+
 .gold_counter input {
     width: 100px;
     padding: 5px;
 }
 
-/* Optional: Add some spacing between elements */
-.activity_box + .activity_box {
+
+.activity_box  {
     margin-left: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loss {
+    color: red;
+}
+
+.gain {
+    color: green;
 }
